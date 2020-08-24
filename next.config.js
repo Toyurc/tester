@@ -7,33 +7,33 @@ const nextConfig = {
     clientsClaim: true,
     runtimeCaching: [
       {
-        handler: 'cacheFirst',
+        handler: 'CacheFirst',
         options: {
           cacheName: 'images',
         },
         urlPattern: /(http[s]?:\/\/.*\.(?:png|webp|jpg|jpeg|svg))/,
       },
       {
-        handler: 'cacheFirst',
+        handler: 'CacheFirst',
         options: {
           cacheName: 'fonts',
         },
         urlPattern: /\.(?:woff|woff2|otf|ttf)$/,
       },
       {
-        handler: 'networkFirst',
+        handler: 'NetworkFirst',
         options: {
           cacheName: 'scripts',
         },
         urlPattern: /\.(?:js|jsx)$/,
       },
       {
-        handler: 'networkFirst',
+        handler: 'NetworkFirst',
         options: {
           cacheableResponse: {
             statuses: [0, 200],
           },
-          cacheName: 'offlineCache',
+          cacheName: 'OfflineCache',
         },
         urlPattern: /http[s]?:\/\/.*/,
       },

@@ -1,10 +1,10 @@
 {
-  "name": "VerifyMe Nigeria",
-  "short_name": "VerifyMe",
+  "name": "Test Nigeria",
+  "short_name": "Test",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "/",
-  "description": "Verifyme Nigeria",
+  "description": "Test Nigeria",
   "background_color": "#ffffff",
   "theme_color": "#55872d",
 
