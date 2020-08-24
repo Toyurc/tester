@@ -1,6 +1,8 @@
 const withOffline = require('next-offline')
 
 const nextConfig = {
+  // Target must be serverless
+  target: 'serverless',
   workboxOpts: {
     clientsClaim: true,
     runtimeCaching: [
