@@ -19,6 +19,10 @@ export default function Home() {
           <code className={styles.code}>pages/index.js</code>
         </p>
 
+        <div>
+          <img src="https://res.cloudinary.com/verify-me/image/upload/v1593510818/samples/cloudinary-group.jpg"/>
+        </div>
+
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h3>Documentation &rarr;</h3>

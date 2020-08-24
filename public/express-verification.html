@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        Create new application account </title>
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="/v1/inline.js" type="text/javascript"></script>
+    <style>
+    body {
+        background: #9053c7;
+        background: -webkit-linear-gradient(-135deg,#55872d, #406622);
+        background: -o-linear-gradient(-135deg,#55872d, #406622);
+        background: -moz-linear-gradient(-135deg,#55872d, #406622);
+        background: linear-gradient(-135deg,#55872d, #406622);
+        background-size: 100% 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 100px auto;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .login-logo {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .login-box-body {
+        margin: 0 50px;
+        padding: 50px 0;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .box-title {
+        color: #555;
+        padding: 10px;
+        background-color: #406622;
+        color: white;
+        font-size: 13px;
+        margin: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 5px;
+    }
+
+    .form-group .form-control {
+        padding: 10px;
+        display: block;
+        font-size: 15px;
+        width: 90%;
+        border: thin solid #ddd;
+    }
+    
+    .verifyMePopLauncher {
+        background-color: #F06018;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+        border: none;
+        box-shadow: 3px 3px 6px #999;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="center-div">
+        <div style="max-width: 600px" class="container">
+            <div class="login-box-body">
+                <div class="login-logo">
+                    <b>This is a test page</b>
+                </div>
+                <div class="row">
+                    <div class="box box-success">
+                        <div class="box-header with-border">
+                            <h3 class="box-title text-center">Create new application account</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <!-- form start -->
+                        <div class="box-body">
+                            <form name="create_applicant" method="post" action="">
+                                <div id="create_applicant">
+                                    <div class="form-group"><label class="control-label"
+                                            for="create_applicant_firstname">Firstname</label> <input type="text"
+                                            id="create_applicant_firstname" name="create_applicant[firstname]"
+                                            maxlength="255" class="form-control" value="Hussaina" /> </div>
+                                    <div class="form-group"><label class="control-label"
+                                            for="create_applicant_middlename">Middlename</label> <input type="text"
+                                            id="create_applicant_middlename" name="create_applicant[middlename]"
+                                            maxlength="255" class="form-control" value="Ola" /> </div>
+                                    <div class="form-group"><label class="control-label"
+                                            for="create_applicant_lastname">Lastname</label> <input type="text"
+                                            id="create_applicant_lastname" name="create_applicant[lastname]"
+                                            maxlength="255" class="form-control" value="Ezekiel" /> </div>
+                                    <div class="form-group"><label class="control-label required"
+                                            for="create_applicant_email">Email</label> <input type="text"
+                                            id="create_applicant_email" name="create_applicant[email]"
+                                            required="required" maxlength="254" class="form-control" value="hussykiel@gmail.com" /> </div>
+                                    <div class="form-group"><label class="control-label required"
+                                            for="create_applicant_phone">Phone</label> <input type="text"
+                                            id="create_applicant_phone" name="create_applicant[phone]"
+                                            required="required" maxlength="20" class="form-control" value="07033322200" /> </div> 
+                                    <div class="form-group"><label class="control-label required"
+                                            for="create_applicant_nin">National Identity Number</label> <input type="text"
+                                            id="create_applicant_nin" name="create_applicant[nin]"
+                                            required="required" maxlength="20" class="form-control" value="100000300001" /> </div>
+                                    <div class="form-group"><label class="control-label required"
+                                            for="create_applicant_verifyme_id">VerifyMe ID</label> 
+                                            <button class="verifyMePopLauncher" onclick="getVerifyMeId(event)">Get VerifyMe Applicant ID</button> <input type="text"
+                                            id="create_applicant_verifyme_id" name="create_applicant[verifyme_id]"
+                                            required="required" readonly maxlength="50" class="form-control" /> </div>
+                                </div>
+                        </div>
+                        <div class="box-footer">
+                            <button class="btn btn-success btn-lg pull-right">Create Application Account</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        function getVerifyMeId(event){
+            event.preventDefault();
+
+            new VerifyMePopupSetup({
+                lastname: document.getElementById('create_applicant_lastname').value,
+                firstname: document.getElementById('create_applicant_firstname').value,
+                middlename: document.getElementById('create_applicant_middlename').value,
+                email: document.getElementById('create_applicant_email').value,
+                phone: document.getElementById('create_applicant_phone').value,
+                identityType: 'nin',
+                identity: document.getElementById('create_applicant_nin').value,
+                key: 'pk_live_d27d4ef98c6b897a278d54e56c2c26c8743b7598266',
+                callback: function(response){
+                    if(response.status == 'error'){
+                        alert(response.message);
+                    } else {
+                        document.getElementById('create_applicant_verifyme_id').value = response.data.verificationId;
+                    }
+                }
+            });
+        }
+    </script>
+
+</body>
+
+
+
+</html>

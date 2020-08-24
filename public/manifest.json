@@ -1,0 +1,43 @@
+{
+  "name": "VerifyMe Nigeria",
+  "short_name": "VerifyMe",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Verifyme Nigeria",
+  "background_color": "#ffffff",
+  "theme_color": "#55872d",
+
+  "icons": [
+    {
+      "src": "./icons/icon_96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "./icons/icon_128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "./icons/icon_192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./icons/icon_256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "./icons/icon_384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "./icons/icon_512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
