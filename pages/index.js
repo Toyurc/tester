@@ -7,8 +7,8 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <link href="/manifest.json" rel="manifest" />
       </Head>
-
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
@@ -20,7 +20,7 @@ export default function Home() {
         </p>
 
         <div>
-          <img src="https://res.cloudinary.com/verify-me/image/upload/v1593510818/samples/cloudinary-group.jpg"/>
+          <img src="https://res.cloudinary.com/verify-me/image/upload/q_auto,f_auto,dpr_auto/v1593510818/samples/cloudinary-group.jpg"/>
         </div>
 
         <div className={styles.grid}>
